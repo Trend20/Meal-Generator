@@ -10,4 +10,33 @@ body{
 
 .container{
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.container >h3{
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.container>button{
+    border: none;
+    border-radius: 10px;
+    width: 20vw;
+    height: 10vh;
+    background: #7a7017;
+    color: #222221;
+    font-size: 2rem;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+}
+
+.meal-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
