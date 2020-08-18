@@ -11,3 +11,21 @@ mealButton.addEventListener('click', () =>{
         console.warn(e);
     })
 });
+
+const createMeal = (meal) =>{
+
+    const ingredients=[];
+
+    // extract all the ingredients of upto 20
+
+    for(i = 0; i<=20; i++){
+        if(meal[`strIngredients ${i}`]){
+            ingredients.push(
+                `${meal[`ingredients ${1}`]} - ${meal[`strMeasures${1}`]}` 
+            );
+        }else{
+            // break the loop
+            break;
+        }
+    }
+}
