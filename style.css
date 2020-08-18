@@ -41,3 +41,9 @@ body{
     align-items: center;
     margin: 50px;
 }
+
+.five{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+}
