@@ -1,29 +1,29 @@
 const mealButton = document.getElementById('meal');
 const mealContainer = document.querySelector('.meal-container');
 
-mealButton.addEventListener('click', () =>{
+mealButton.addEventListener('click', () => {
     fetch(' https://www.themealdb.com/api/json/v1/1/random.php')
-    .then(res =>res.json())
-    .then(res =>{
-        createMeal(res.meals[0]);
-    })
-    .catch(e =>{
-        console.warn(e);
-    })
+        .then(res => res.json())
+        .then(res => {
+            createMeal(res.meals[0]);
+        })
+        .catch(e => {
+            console.warn(e);
+        })
 });
 
-const createMeal = (meal) =>{
+const createMeal = (meal) => {
 
-    const ingredients=[];
+    const ingredients = [];
 
     // extract all the ingredients of upto 20
 
-    for(i = 0; i<=20; i++){
-        if(meal[`strIngredients ${i}`]){
+    for (i = 0; i <= 20; i++) {
+        if (meal[`strIngredients ${i}`]) {
             ingredients.push(
-                `${meal[`ingredients ${1}`]} - ${meal[`strMeasures${1}`]}` 
+                `${meal[`ingredients ${1}`]} - ${meal[`strMeasures${1}`]}`
             );
-        }else{
+        } else {
             // break the loop
             break;
         }
@@ -59,8 +59,8 @@ const createMeal = (meal) =>{
 		${
 			meal.strYoutube
 				? `
-		<div class="row">
-			<h5>Video Recipe</h5>
+		<div class="row" id="demo">
+			<h5>Video Demo</h5>
 			<div class="videoWrapper">
 				<iframe width="420" height="315"
 				src="https://www.youtube.com/embed/${meal.strYoutube.slice(-11)}">
@@ -71,5 +71,5 @@ const createMeal = (meal) =>{
 		}
 	`;
 
-	mealContainer.innerHTML = newInnerHTML;
+    mealContainer.innerHTML = newInnerHTML;
 };

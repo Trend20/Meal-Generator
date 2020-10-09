@@ -1,14 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -16,12 +16,12 @@ body{
     min-height: 50vh;
 }
 
-.container >h3{
+.container>h3 {
     font-size: 2.5rem;
     letter-spacing: 2px;
 }
 
-.container>button{
+.container>button {
     border: none;
     border-radius: 10px;
     width: 20vw;
@@ -34,7 +34,7 @@ body{
     outline: none;
 }
 
-.meal-container{
+.meal-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,8 +42,20 @@ body{
     margin: 50px;
 }
 
-.five{
+.five {
     display: flex;
     flex-direction: column;
-    width: 50vw;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+
+.five>img {
+    max-width: 30%;
+    height: auto;
+}
+
+#demo {
+    margin-top: 30px;
 }
